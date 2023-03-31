@@ -1,0 +1,28 @@
+fragment OfferFilterValues on OfferFilterValues {
+  # mark{
+  #   ... MarkFieldType
+  # }
+  # folder{
+  #   ... FolderFieldType
+  # }
+  # generation{
+  #   ... GenerationFieldType
+  # }
+#  gearbox{
+#    ... GearboxFieldType
+#  }
+#  engineType{
+#    ... EngineTypeFieldType
+#  }
+#  driveType{
+#    ... DriveTypeFieldType
+#  }
+#  bodyType{
+#    ... BodyTypeFieldType
+#  }
+#  owner{
+#    ... OwnerFieldType
+#  }
+  year
+  price
+}

@@ -1,0 +1,97 @@
+.list__tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  // background: $color-bg-grey;
+  // border: 1px solid $color-bg-grey-hover;
+  border: 2px solid $color-info-items;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 15px;
+  gap: 6px;
+}
+
+.list__tab--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  background: none;
+  text-decoration: none;
+  border-radius: $border-radius-smallest;
+  border: none;
+  font-size: 16px;
+  gap: 6px;
+}
+
+
+.list__tab--active {
+  background: $color-bg-grey-hover;
+}
+
+.list__tab--header.list__tab--active {
+  background: none;
+}
+.list__tab--header.list__tab--active .list__tab-name{
+  color: $color-main;
+}
+.list__tab--header.list__tab--active .list__tab-number{
+  color: $color-main;
+}
+
+.list__tab--mark {
+  width: calc(50% - 4px);
+}
+
+.list__tab-name {
+  color: $color-text;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list__tab-number {
+  color: $color-info-dark;
+  font-weight: 600;
+  margin-left: 3px;
+  background-color: $color-info-items;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.list__tab-number--header{
+  background-color: $color-white;
+  padding: 0;
+}
+
+
+@media (min-width: $tablet-width) {
+  .list__tab {
+    transition: .16s ease-in-out;
+
+    &:hover {
+      background: $color-bg-grey-hover;
+    }
+  }
+  .list__tab--header {
+    &:hover {
+      background: none;
+
+      .list__tab-name , .list__tab-number {
+        transition: .16s;
+        color: $color-main;
+        font-weight: 700;
+      }
+
+    }
+
+  }
+
+  .list__tab--mark {
+    width: auto;
+    margin-bottom: 8px;
+    transition: .24s ease-in-out;
+  }
+}

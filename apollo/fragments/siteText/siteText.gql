@@ -1,0 +1,3 @@
+fragment SiteText on SiteText {
+    body
+}

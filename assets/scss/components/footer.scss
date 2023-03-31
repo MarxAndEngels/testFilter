@@ -1,0 +1,68 @@
+.footer {
+  margin-top: 24px;
+  padding: 16px 0;
+  border-top: 2px solid $color-grey-normal;
+}
+
+.footer__label {
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer__disclaimer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer__disclaimer-bank {
+  display: block;
+  margin: 0 auto 16px;
+  width: 64px;
+}
+
+.footer__disclaimer-bank-text {
+  padding: 0 24px;
+}
+
+.footer__disclaimer--border-top {
+  padding-top: 16px;
+  border-top: 2px solid $color-grey-normal;
+}
+
+.footer__disclaimer p {
+  margin-bottom: 8px;
+}
+
+.footer__disclaimer a {
+  margin-bottom: 8px;
+  color: $color-text;
+  text-decoration: underline;
+}
+
+.footer__legal {
+  font-size: 12px;
+  margin-top: 24px;
+  color: $color-grey-dark;
+}
+
+.footer__payment {
+  margin-top: 16px;
+}
+
+.footer__payment-line {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer__payment-title {
+  color: $color-grey-dark;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer__payment-item {
+  max-width: 64px;
+  max-height: 40px;
+}

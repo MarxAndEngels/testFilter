@@ -1,0 +1,26 @@
+.heading {
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.heading--h1 {
+  margin-top: 16px;
+  font-size: 24px;
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.heading--h2{
+  font-size: 18px;
+  margin-top: 0;
+}
+.heading--h3 {
+  font-weight: 400;
+  font-size: 14px;
+  color: $color-grey-dark;
+  margin-top: 0;
+}
+.heading--h3-mt{
+  margin-top: 4px;
+}

@@ -1,0 +1,35 @@
+#import "./markFieldType.gql"
+#import "./folderFieldType.gql"
+#import "./generationFieldType.gql"
+#import "./bodyTypeFieldType.gql"
+
+fragment ChosenFieldType on ChosenFieldType {
+  mark{
+    ... MarkFieldType
+  }
+  folder{
+    ... FolderFieldType
+  }
+  generation{
+    ... GenerationFieldType
+  }
+#  gearbox{
+#    ... GearboxFieldType
+#  }
+#  engineType{
+#    ... EngineTypeFieldType
+#  }
+#  driveType{
+#    ... DriveTypeFieldType
+#  }
+ bodyType{
+   ... BodyTypeFieldType
+ }
+#  owner{
+#    ... OwnerFieldType
+#  }
+  yearFrom
+  yearTo
+#  priceFrom
+#  priceTo
+}

@@ -1,0 +1,5 @@
+fragment DriveTypeType on DriveType {
+  id
+  title
+  name
+}

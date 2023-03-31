@@ -1,0 +1,185 @@
+.button {
+  display: flex;
+  height: 44px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  border-radius: $border-radius-smallest;
+  cursor: pointer;
+  transition: .24s;
+  width: fit-content;
+  background: $color-main;
+  font-weight: bold;
+  color: #fff;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.button--slider{
+  padding: 0 16px;
+  gap: 8px;
+  @media screen and (max-width: $tablet-width) {
+    height: 44px;
+  }
+}
+.button--slider svg{
+  width: 12px;
+  height: 12px;
+  margin-top: 2px;
+}
+.button--all-marks {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 48px;
+  width: 54px;
+  padding: 0;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 0;
+  color: $color-main;
+  font-weight: bold;
+  gap: 4px;
+  justify-content: flex-end;
+}
+.button--all-marks svg{
+  fill: $color-black;
+  width: 26px;
+  height: 26px;
+  margin-top: 1px;
+  transition: .16s;
+}
+.button--all-marks--active svg{
+  transform: rotate(180deg);
+  margin-top: 3px;
+}
+.button--credit {
+  padding: 0 16px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+  font-size: 18px;
+  height: 48px;
+  box-shadow: $box-shadow-button;
+
+  &:hover {
+    opacity: 0.8;
+    background: $color-main-hover;
+  }
+}
+.button-callback{
+  width: 60px;
+  height: 48px;
+  background-color: $color-green;
+  svg{
+    width: 24px;
+    height: 24px;
+    fill: $color-white;
+  }
+  @media screen and (max-width: $tablet-width) {
+    height: 56px;
+    width: 48px;
+  }
+}
+.button--filter {
+  padding: 0 16px;
+  display: flex;
+  gap: 4px;
+  width: 100%;
+
+  &:hover {
+    background: $color-main-hover;
+  }
+}
+
+.button--credit-offer {
+  height: 64px;
+  width: 100%;
+  margin-left: 0;
+  font-size: 18px;
+  border-radius: $border-radius-smallest;
+  box-shadow: $box-shadow-button;
+}
+
+.button--trade-in {
+  background: $color-green;
+}
+
+.button--text-drive {
+  background: $color-info;
+  color: $color-blue;
+}
+
+.button--cookie {
+  background: $color-info;
+  color: $color-blue;
+  padding: 0 16px;
+  margin: 16px auto;
+
+  &:hover {
+    background: $color-info-hover;
+  }
+}
+
+.button--form {
+  padding: 0 16px;
+  width: 100%;
+  height: 64px;
+  font-size: 20px;
+  border-radius: $border-radius-smallest;
+
+  &:hover {
+    background: $color-main-hover;
+  }
+}
+
+.button--more {
+  background: $color-info-dark;
+  font-weight: bold;
+  color: $color-white;
+  width: 100%;
+  margin-top: 6px;
+  transition: .24s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    // background: $color-info-hover;
+  }
+}
+
+.button--more-main {
+  margin-top: 24px;
+}
+
+.button--autoteka {
+  display: flex;
+  gap: 8px;
+  padding: 0 8px;
+  background: $color-info;
+  color: $color-text;
+  font-weight: bold;
+}
+
+.button--autoteka_sub-text{
+  display: inline-block;
+  @media screen and (max-width: 394px) {
+    display: none;
+  }
+}
+
+.button--autoteka svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .button--credit{
+
+  }
+  .button--credit, .button--form {
+    height: 48px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,5 @@
+fragment BodyTypeType on BodyType {
+  id
+  title
+  name
+}

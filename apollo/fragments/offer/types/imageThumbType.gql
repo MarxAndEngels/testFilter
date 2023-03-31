@@ -1,0 +1,4 @@
+fragment ImageThumbType on OfferImage {
+  thumb
+  original
+}

@@ -1,0 +1,7 @@
+fragment ImageAllType on OfferImage {
+    original
+    tiny
+    thumb
+    medium
+    src
+}

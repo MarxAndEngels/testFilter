@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'TTHoves';
+  src: url('../fonts/TTHoves-Regular.woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTHoves';
+  src: url('../fonts/TTHoves-Medium.woff2');
+  font-display: swap;
+}
+
+$fontRegular: TTHovesRegular, -apple-system, system-ui, BlinkMacSystemFont, “Segoe UI”, Roboto, “Helvetica Neue”, Arial, sans-serif;
+
+//$fontTerminator: 'TerminatorGenisys';
+$font-bold: 600;
+
+$tablet-width: 768px;
+$small-desktop-width: 992px;
+$tablet-width-max: 1199px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+$iphone-mini-only: 320px;
+$iphone-se-only: 375px;
+
+$color-main: #f12b2e;
+$color-main-dop: #ed6827;
+$color-main-dark: #484e63;
+$color-main-two: #3ac2ef;
+$color-grey-tippy: #dbdee4;
+$color-info-tippy:rgb(185 203 228);
+$color-info-items:#e3e6ed;
+$color-main-hover: #f27173;
+$box-shadow-button: 0 0 24px 0px rgba(234, 35, 35, 0.24);
+
+$color-white: #fff;
+$color-black: #212121;
+$black: #212121;
+$white: #fff;
+
+$color-bg-grey: #f7f8fa;
+$color-bg-grey-hover: #dbdee4;
+
+$color-grey-light: #FAFAFA;
+$color-grey-normal: #E1E1E1;
+$color-grey-light-normal: #f4f4f4;
+$color-grey: #f6f6f6;
+$color-grey-text: #919399;
+$color-grey-dark: #757575;
+$color-grey-dark-line: #717b9c;
+
+$color-text: #212121;
+$color-text-gray: #919399;
+
+$color-red: #fc262b;
+$color-pink: #E91E63;
+$color-purple: #9C27B0;
+$color-green: #6eb91f;
+$color-light-green: #8BC34A;
+$color-lime: #CDDC39;
+$color-blue: #2196F3;
+$color-blue-lighten: #90CAF9;
+$color-cyan: #00BCD4;
+$color-teal: #009688;
+$color-yellow: #FFEB3B;
+$color-amber: #FFC107;
+$color-orange: #FF9800;
+$color-deep-orange: #FF5722;
+$color-brown: #795548;
+$color-blue-grey: #607D8B;
+$color-info: #e8ebf0;
+$color-info-dark: #6d7fa3;
+$color-info-hover: #e1eaf8;
+$color-grey-normal: #E1E1E1;
+
+
+$transition-hover: 0.2s cubic-bezier(0.37, 0, 0.63, 1);
+
+$box-shadow: 0 0 8px rgb(0 0 0 / 12%);
+$box-shadow-green: 0 2px 8px rgb(76 175 80 / 32%);
+$box-shadow-hover: 0 2px 8px rgb(0 0 0 / 16%);
+$border-radius: 16px;
+$border-radius-small: 8px;
+$border-radius-smallest: 4px;

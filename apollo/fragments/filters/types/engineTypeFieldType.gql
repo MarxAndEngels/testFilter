@@ -1,0 +1,5 @@
+fragment EngineTypeFieldType on EngineTypeField {
+  title
+  id
+  slug
+}

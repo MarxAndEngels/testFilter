@@ -1,0 +1,19 @@
+.benefits__mobile{
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-bottom: 0;
+}
+.benefits__mobile .carousel__button{
+  background: $color-grey-normal;
+  border-radius: $border-radius-small;
+  width: 32px;
+  height: 32px;
+}
+
+.benefits__mobile.has-dots{
+  margin-bottom: 0;
+}
+
+.benefits__mobile .carousel__dots {
+  display: none;
+}

@@ -1,0 +1,4 @@
+fragment SeoTagCrumbs on SeoTagCrumbs {
+  title
+  link
+}

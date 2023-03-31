@@ -1,0 +1,358 @@
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  box-shadow: $box-shadow;
+}
+
+.header__top {
+  border-bottom: 1px solid $color-grey-normal;
+}
+
+.header__bottom {
+  border-bottom: 1px solid $color-grey-normal;
+}
+
+.header__controls {
+  height: 48px;
+  position: relative;
+}
+
+.header__inner {
+  display: flex;
+  height: 64px;
+  margin: 2px 0;
+  margin-top: 10px;
+  align-items: center;
+  gap: 16px;
+  @media screen and (max-width: $tablet-width) {
+    margin: 2px 0;
+    margin-top: 0px;
+ }
+}
+
+.header__logo {
+  font-weight: bold;
+  color: $color-text;
+  text-decoration: none;
+  position: relative;
+  z-index: 6;
+  font-size: 13px;
+  transition: .16s ease-in-out;
+}
+
+.header__logo--white {
+  filter: brightness(0) invert(1);
+}
+
+.header__logo img {
+  opacity: 1;
+  filter: none;
+  width: 180px;
+  @media screen and (max-width: $tablet-width) {
+    width: 140px;
+ }
+  @media screen and (max-width: 350px) {
+    width: 120px;
+ }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 22px;
+  position: relative;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.burger__line {
+  height: 3px;
+  border-radius: $border-radius-small;
+  width: 100%;
+  background: $color-text;
+  transition: .24s;
+  top: 0;
+  left: 0;
+  position: relative;
+  &:nth-child(1) {
+    width: 60%;
+  }
+  &:nth-child(3) {
+    width: 60%;
+  }
+}
+
+.burger--open {
+  .burger__line {
+    background: #fff;
+
+    &:nth-child(1) {
+      top: 6px;
+      left: -3px;
+      width: 50%;
+      transform: rotate(-40deg);
+    }
+
+    &:nth-child(3) {
+      top: -6px;
+      left: -3px;
+      width: 50%;
+      transform: rotate(40deg);
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(-200%);
+  transition: .32s;
+  background: $color-main-dark;
+  padding: 84px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav--open {
+  transform: translateX(0);
+}
+
+.nav__item {
+  padding: 24px 16px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid $color-grey-dark-line;
+
+  &:first-child {
+    border-top: 2px solid $color-grey-dark-line;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  gap: 8px;
+  @media screen and (max-width: $tablet-width) {
+     margin-left: auto;
+  }
+}
+
+.header__contacts-phone {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-smallest;
+  background: $color-main;
+  position: relative;
+  z-index: 6;
+  text-decoration: none;
+  color: $color-black;
+  font-size: 14px;
+  @media screen and (max-width: $tablet-width) {
+    width: 114px;
+    height: 32px;
+  }
+}
+
+.header__contacts-phone span {
+  display: none;
+}
+
+.header__contacts-phone--open {
+  background: #fff;
+  transition: .24s ease-in-out;
+  transition-delay: .24s;
+}
+
+.header__contacts-phone svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+.header__contacts-phone--open svg {
+  fill: $color-main;
+  transition: .24s ease-in-out;
+  transition-delay: .24s;
+}
+
+.nav__info {
+  margin-top: 24px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nav__info-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav__info-item--phone {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header__back {
+  display: none;
+  height: 100%;
+  left: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $color-text;
+}
+
+.header__back--active {
+  display: flex;
+}
+
+.header__back svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  fill: $color-text;
+  transform: rotate(90deg);
+}
+
+.header__modal {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 124px;
+  padding: 0 0 24px;
+  height: calc(100vh - 114px);
+  overflow-y: scroll;
+  @media screen and (max-width: $tablet-width) {
+    top: 116px;
+  }
+}
+@media screen and (min-width: $tablet-width) {
+  .header__back--active {
+    display: none;
+  }
+}
+@media screen and (min-width: $small-desktop-width) {
+  .burger {
+    display: none;
+  }
+  .nav__info {
+    display: none;
+  }
+  .header__contacts-phone {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: none;
+    position: relative;
+    z-index: 4;
+    text-decoration: none;
+  }
+  .header__contacts-phone svg {
+    display: none;
+  }
+  .header__contacts-phone span {
+    display: block;
+    color: $color-text;
+    font-weight: bold;
+  }
+  .nav {
+    transform: none;
+    position: relative;
+    transition: none;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    background: #fff;
+    gap: 24px;
+    padding: 0 0 0 32px;
+    margin: 0 auto;
+  }
+
+  .nav__item {
+    color: $color-text;
+    padding: 0;
+    border: none;
+    font-size: 16px;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 0;
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      height: 2px;
+      background: $color-main;
+      transform: translateX(-50%);
+      transition: .24s ease-in-out;
+    }
+
+    &:hover {
+      color: $color-main;
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &:first-child {
+      border: none;
+    }
+  }
+  .nav__item.active {
+    color: $color-main;
+
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.header__contacts-phone_sub-title{
+  display: none;
+  @media screen and (max-width: $tablet-width) {
+    display: block;
+    text-decoration: none;
+    margin-left: 6px;
+    color: $color-white;
+  }
+}
+
+
+.header__contacts-phone_sub-title.open{
+  color: $color-black;
+}
+
+.wrapper__select_car{
+  display: flex;
+  justify-content: center;
+  background-color: $color-grey-tippy;
+  padding:3px;
+  border-radius: 4px;
+  span{
+    color: $color-black;
+    font-size: 14px;
+  }
+}
+
+.wrapper__select_car.active{
+  background-color: $color-red;
+}

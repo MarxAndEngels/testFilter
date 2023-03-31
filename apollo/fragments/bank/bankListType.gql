@@ -1,0 +1,8 @@
+fragment BankListType on Bank {
+    id
+    slug
+    name
+    image
+    license_title
+    license_file
+}

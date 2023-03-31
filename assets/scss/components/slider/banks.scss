@@ -1,0 +1,35 @@
+.carousel--banks {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-bottom: 0;
+}
+
+.carousel--banks.has-dots {
+  margin-bottom: 0;
+}
+
+.carousel--banks .carousel__dots {
+  display: none;
+}
+
+.carousel__slide--banks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__slide--banks img {
+  max-width: 240px;
+  max-height: 80px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .carousel__slide--banks {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: $small-desktop-width) {
+
+}

@@ -1,0 +1,5 @@
+fragment MarkFieldType on MarkField {
+  title
+  id
+  slug
+}

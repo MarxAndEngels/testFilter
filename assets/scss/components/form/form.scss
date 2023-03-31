@@ -1,0 +1,273 @@
+.form__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form__alert {
+  color: $color-text;
+  font-size: 12px;
+  text-align: center;
+  border-radius: $border-radius-smallest;
+}
+
+.form__controls-group {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: $border-radius-smallest;
+  box-shadow: $box-shadow;
+}
+
+.form__controls-group--error {
+  position: relative;
+  border: 1px solid $color-red;
+
+  &:after {
+    content: 'Выберите автомобиль';
+    position: absolute;
+    font-size: 10px;
+    top: -13px;
+    left: 8px;
+    color: $color-red;
+  }
+}
+
+.form__controls-title {
+  font-size: 16px;
+  text-align: center;
+}
+
+.form__controls-offers {
+  max-height: 320px;
+  overflow-y: scroll;
+  background: #fff;
+  border-radius: $border-radius-smallest;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__offer {
+  position: relative;
+  padding: 8px 28px 8px 8px;
+  border-radius: $border-radius-smallest;
+  background: $color-bg-grey;
+  border-bottom: 2px solid $color-grey;
+}
+
+.form__offer-delete {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
+  background: $color-bg-grey;
+  border-radius: 16px;
+  transition: .16s;
+  padding: 4px;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.form__offer-price {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.form__offer-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form__offer-title-wrapper {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.form__offer-title {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form__offer-price-actual {
+  color: $color-red;
+  font-weight: bold;
+}
+
+.form__offer-price-credit {
+  font-size: 14px;
+  color: $color-grey-dark;
+}
+
+.form__offer-img {
+  width: 80px;
+  height: 64px;
+  display: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: $border-radius-smallest;
+
+  &:first-child {
+    display: block;
+  }
+}
+
+.range__component {
+  position: relative;
+}
+
+.calculator__controls {
+  margin-bottom: 24px;
+}
+
+.range {
+  margin-top: 16px;
+  width: 100%;
+  position: relative;
+
+  input {
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+.progressed__line {
+  position: absolute;
+  height: 6px;
+  bottom: 16px;
+  border-radius: 5px;
+  left: 1px;
+  background: $color-main;
+  z-index: 0;
+  width: 50%;
+  pointer-events: none;
+}
+
+.range__title {
+  margin-bottom: 8px;
+}
+
+.range__title span {
+  font-weight: bold;
+}
+
+.range__dimension {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.range__dimension-item {
+  width: 1px;
+  border-right: 1px dashed #e1e4e9;
+  height: 6px;
+  margin-top: 6px;
+  position: relative;
+}
+
+.range__dimension-item span {
+  position: absolute;
+  font-size: 10px;
+  white-space: nowrap;
+  color: #8f8f8f;
+  top: 6px;
+  left: -50%;
+  transform: translateX(-50%);
+}
+
+input[type=range] {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  height: 7px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 7px;
+  border-radius: 5px;
+  background: $color-info;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: $color-main;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  outline: 4px solid #fff;
+  -webkit-appearance: none;
+  border-radius: 24px;
+  margin-top: -9px;
+  transition: .24s;
+  transform: scale(1.01);
+
+  &:hover {
+    transform: scale(1.24);
+  }
+}
+
+.form__calculator {
+  padding: 16px;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius-small;
+}
+
+.conditions__info {
+  display: flex;
+  gap: 16px;
+}
+
+.conditions__info-block {
+  width: calc(50% - 8px);
+  background: $color-info;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 16px 8px;
+  border-radius: $border-radius-small;
+}
+
+.conditions__info-title {
+  font-size: 14px;
+}
+
+.conditions__info-value {
+  font-size: 20px;
+  display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    span{
+      margin-right: 6px;
+      transform: translateY(-2px);
+    }
+    .tippy{
+      .tippy__icon{
+        fill: $color-info-tippy;
+      }
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .form__offer {
+    cursor: pointer;
+  }
+}

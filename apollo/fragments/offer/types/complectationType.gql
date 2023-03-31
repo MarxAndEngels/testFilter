@@ -1,0 +1,4 @@
+fragment ComplectationType on Complectation {
+  id
+  name
+}

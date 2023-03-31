@@ -1,0 +1,42 @@
+.skeleton {
+  background: $color-bg-grey;
+  border-radius: $border-radius-smallest;
+}
+
+.catalog--skeleton {
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skeleton__offer {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  height: 374.5px;
+}
+
+.skeleton__offer--page {
+  height: calc(100vh - 16px);
+  width: 100%;
+  margin-top: 16px;
+  margin-left: 0;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .skeleton__offer {
+    width: 280px;
+    height: 377px;
+    margin-left: 0;
+  }
+  .catalog--skeleton {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .skeleton__offer--page{
+    height: calc(100vh - 16px);
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+  }
+}

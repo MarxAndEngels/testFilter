@@ -1,0 +1,88 @@
+.filters {
+  padding: 16px;
+  border-radius: $border-radius-smallest;
+  box-shadow: $box-shadow;
+  margin-top: 16px;
+}
+.filter__buttons{
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: $tablet-width) {
+     flex-direction: column;
+  }
+}
+.filter__reset{
+  background-color: $color-red;
+  color: $color-main;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: $border-radius-smallest;
+  cursor: pointer;
+  font-size: 16px;
+  color: $color-white;
+  @media screen and (max-width: $tablet-width) {
+    width: 100%;
+ }
+}
+.filters__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.filters__group .select.nodata {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.filters__list{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 6px;
+}
+
+
+.wrapper__filter-item_price{
+  position: relative;
+}
+.filter-item_price_title{
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  pointer-events: none;
+  background-color: $color-grey-normal;
+  color: black;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 10px;
+  @media screen and (max-width: 356px) {
+    padding: 3px 4px;
+  }
+}
+
+.select__wrapper--filter{
+  width: calc(50% - 4px);
+  @media screen and (min-width: $tablet-width) {
+    width: calc(33% - 4px);
+  }
+}
+
+@media screen and (min-width: $small-desktop-width) {
+  .filters__group .select {
+    width: calc(50% - 16px)
+  }
+  .filters__group .filter__buttons {
+    width: calc(50% - 16px)
+  }
+}

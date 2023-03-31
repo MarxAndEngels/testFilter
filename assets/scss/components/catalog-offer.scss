@@ -1,0 +1,314 @@
+.catalog__offer {
+  width: 100%;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius-smallest;
+  text-decoration: none;
+  color: $color-text;
+  padding-bottom: 16px;
+  overflow: hidden;
+}
+
+.catalog__offer-body {
+  padding: 0 16px;
+}
+
+.catalog__offer-name {
+  color: $color-text;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  gap: 4px;
+}
+
+.catalog__offer-name-year {
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+.catalog__offer-name-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.catalog__offer-name-buttons-autoteka, .catalog__offer-name-buttons-like {
+  background: $color-info;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-smallest;
+}
+
+.catalog__offer-name-buttons-autoteka svg, .catalog__offer-name-buttons-like svg {
+  width: 18px;
+  height: 18px;
+}
+
+.catalog__offer-footer-benefit{
+  font-size: 13px;
+}
+
+.catalog__offer-price {
+  font-weight: bold;
+  color: $color-red;
+  font-size: 22px;
+  @media screen and (max-width: $tablet-width) {
+    font-size: 19px;
+  }
+  @media screen and (max-width: $iphone-mini-only) {
+    font-size: 16px;
+  }
+}
+
+.catalog__offer-price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.catalog__offer-price-credit {
+  font-size: 14px;
+  color: $color-text-gray;
+  @media screen and (max-width: $iphone-mini-only) {
+    font-size: 12px;
+  }
+}
+
+.catalog__offer-tech {
+  margin: 8px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  padding: 4px 0;
+  color: $color-text;
+  border-top: 1px solid $color-grey-normal;
+}
+
+.catalog__offer-tech-item svg {
+  display: none;
+}
+
+.catalog__offer-footer-benefits {
+  display: none;
+}
+
+.catalog__offer-wrapper{
+  text-decoration: none;
+}
+
+.catalog__offer-slider {
+  position: relative;
+}
+
+.catalog__offer-slider--vin {
+  &:after {
+    content: 'VIN проверен';
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 8px;
+    font-size: 11px;
+    padding: 0 8px;
+    border-radius: 16px;
+    background: $color-green;
+    color: #fff;
+    box-shadow: $box-shadow;
+    @media screen and (max-width: $tablet-width) {
+      font-size: 11px;
+    }
+  }
+}
+
+.catalog__offer-slider-desktop {
+  display: none;
+}
+
+.catalog__offer-slider-mobile {
+  @include horizontal-scrollbar;
+  display: flex;
+  overflow-x: scroll;
+  height: 192px;
+  margin-bottom: 4px;
+  gap: 8px;
+
+}
+
+.catalog__offer-slider-slide-mobile-call {
+  height: 100%;
+  min-width: 80px;
+  width: 80px;
+  background: $color-green;
+  border-radius: $border-radius-smallest;
+  opacity: .8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.catalog__offer-slider-slide-mobile-call svg {
+  width: 48px;
+  height: 48px;
+  fill: #fff;
+}
+
+.catalog__offer-slide {
+  min-width: 240px;
+  width: 240px;
+}
+
+.catalog__offer-slide img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .catalog__offer-slider-mobile {
+    display: none;
+  }
+  .catalog__offer-slider-desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .catalog__offer-slider-desktop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .catalog__offer-price {
+    font-size: 20px;
+  }
+  .catalog__offer-price-credit {
+    font-size: 12px;
+  }
+  .catalog__offer-name-buttons-autoteka, .catalog__offer-name-buttons-like {
+    width: 30px;
+    height: 30px;
+    transition: .16s;
+
+    &:hover {
+      background: $color-info-hover;
+    }
+  }
+
+  .catalog__offer-name-buttons-autoteka svg, .catalog__offer-name-buttons-like svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .catalog__offer-name-buttons-autoteka {
+    width: auto;
+    text-transform: none;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    // transform: translateY(16px);
+    gap: 6px;
+
+    &:after {
+      content: 'Автотека'
+    }
+  }
+
+  .catalog__offer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+  .catalog__offer-slider {
+    background: $color-bg-grey;
+    width: 240px;
+    min-width: 240px;
+    height: 180px;
+  }
+  .catalog__offer-body {
+    width: 100%;
+    padding: 10px 16px 16px 0;
+    margin: 0 16px;
+    height: 180px;
+    border-right: 2px solid $color-grey;
+  }
+  .catalog__offer-tech {
+    column-gap: 0;
+    row-gap: 12px;
+  }
+  .catalog__offer-tech-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 33%;
+    margin: 6px 0 4px 0;
+  }
+  .catalog__offer-tech-item svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: $color-black;
+  }
+  .catalog__offer-footer {
+    padding: 16px 0;
+    width: 280px;
+    min-width: 280px;
+  }
+  .catalog__offer-footer-benefits {
+    display: block;
+    font-size: 12px;
+  }
+  .catalog__offer-footer-benefit-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .catalog__offer-footer-benefit {
+    margin-bottom: 16px;
+  }
+  .catalog__offer-footer-benefit span {
+    color: $color-main;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: $small-desktop-width) {
+  .catalog__offer {
+    cursor: pointer;
+    transition: box-shadow .16s ease-in-out;
+
+    &:hover {
+      box-shadow: $box-shadow-hover;
+    }
+  }
+}
+
+.catalog__offer-price_title{
+  color: $color-red;
+  font-size: 13px;
+  margin-top: 6px;
+  @media screen and (max-width: $tablet-width) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $iphone-mini-only) {
+    font-size: 12px;
+  }
+}

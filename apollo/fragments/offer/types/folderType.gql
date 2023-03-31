@@ -1,0 +1,5 @@
+fragment FolderType on Folder {
+  id
+  slug
+  title
+}

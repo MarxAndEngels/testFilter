@@ -1,0 +1,5 @@
+fragment DriveTypeFieldType on DriveTypeField {
+  title
+  id
+  slug
+}

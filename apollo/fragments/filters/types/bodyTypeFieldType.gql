@@ -1,0 +1,5 @@
+fragment BodyTypeFieldType on BodyTypeField {
+  title
+  id
+  slug
+}

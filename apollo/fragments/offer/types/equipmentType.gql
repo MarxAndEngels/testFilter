@@ -1,0 +1,4 @@
+fragment EquipmentType on TitleValues {
+    title
+    values
+}

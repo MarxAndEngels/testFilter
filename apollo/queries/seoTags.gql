@@ -1,0 +1,6 @@
+#import "../fragments/seoTag/seoTag.gql"
+query seoTags($site_id: Int!, $url: String!) {
+    seoTag(site_id: $site_id, url: $url) {
+       ... SeoTag
+    }
+}

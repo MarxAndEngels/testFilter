@@ -1,0 +1,5 @@
+fragment GenerationFieldType on GenerationField {
+  title
+  id
+  slug
+}

@@ -1,0 +1,73 @@
+#import "./types/markType.gql"
+#import "./types/folderType.gql"
+#import "./types/generationOfferType.gql"
+#import "./types/gearboxType.gql"
+#import "./types/engineTypeType.gql"
+#import "./types/driveTypeType.gql"
+#import "./types/bodyTypeType.gql"
+#import "./types/colorType.gql"
+#import "./types/ownerType.gql"
+#import "./types/equipmentType.gql"
+#import "./types/complectationType.gql"
+#import "./types/modificationType.gql"
+#import "./types/dealerType.gql"
+
+fragment OfferPage on Offer {
+    id
+    is_active
+    external_id
+    name
+    price
+    price_old
+    run
+    vin
+    year
+    createdAt(format: $dateFormat, sub_day:true)
+    engine_power
+    engine_volume
+    modification{
+        ... ModificationType
+    }
+    complectation{
+        ... ComplectationType
+    }
+    color {
+        ... ColorType
+    }
+    images {
+        medium
+        medium_webp
+        small_webp
+        original
+    }
+    mark {
+        ... MarkType
+    }
+    folder {
+        ... FolderType
+    }
+    owner {
+        ... OwnerType
+    }
+    driveType {
+        ... DriveTypeType
+    }
+    bodyType {
+        ... BodyTypeType
+    }
+    gearbox {
+        ... GearboxType
+    }
+    engineType {
+        ... EngineTypeType
+    }
+    generation {
+        ... GenerationOfferType
+    }
+    equipment_groups{
+        ... EquipmentType
+    }
+    dealer{
+        ... DealerType
+    }
+}

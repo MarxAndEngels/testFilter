@@ -1,0 +1,5 @@
+fragment ColorType on Color {
+  id
+  title
+  name
+}

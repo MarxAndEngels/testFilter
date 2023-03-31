@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  font-size: 15px;
+}
+
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none !important;
+}
+
+input, button {
+  outline: none;
+  border: none;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: $fontRegular;
+  font-weight: 400;
+  color: $color-text;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  padding-top: 116px;
+  @media screen and (max-width: $tablet-width) {
+    padding-top: 120px;
+  }
+}
+.page{
+  margin-top: 16px;
+}
+h2 {
+  font-size: 20px;
+  margin: 16px 0;
+  @media screen and (max-width: $tablet-width) {
+    font-size: 16px;
+    margin: 12px 0;
+  }
+}
+
+.hide_title {
+  position: absolute;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .container {
+    width: $tablet-width;
+  }
+}
+
+@media screen and (min-width: $small-desktop-width) {
+  .container {
+    width: $small-desktop-width;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+  }
+}

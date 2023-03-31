@@ -1,0 +1,44 @@
+.crumbs {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .crumbs {
+    display: block;
+    width: 100%;
+  }
+  .crumbs__list {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    margin: 16px 0 0;
+  }
+}
+
+.crumbs__item {
+  font-size: 16px;
+  cursor: pointer;
+  color: $color-text;
+  position: relative;
+
+  &:before {
+    content: '/';
+    position: relative;
+    top: -1px;
+  }
+
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.crumbs__item span {
+  color: $color-main;
+}
+
+.crumbs__link {
+  color: $color-text;
+  text-decoration: none;
+}

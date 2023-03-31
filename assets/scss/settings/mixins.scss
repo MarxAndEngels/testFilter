@@ -1,0 +1,46 @@
+@mixin grid-item {
+  padding: 16px;
+  background: #fff;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+@mixin font-bold {
+  font-weight: bold;
+}
+
+@mixin box-shadow-hover {
+  cursor: pointer;
+  transition: .24s;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 13%);
+  &:hover {
+    box-shadow: 0 26px 50px -27px rgb(0 0 0 / 62%);
+  }
+}
+
+@mixin horizontal-scrollbar {
+  padding-bottom: 8px;
+  &::-webkit-scrollbar {
+    height: 4px;
+    background-color: $color-grey-light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-main;
+    border-radius: $border-radius-smallest;
+  }
+}
+
+@mixin lazyload {
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-hover;
+  will-change: opacity;
+  -webkit-backface-visibility: hidden;
+}
+
+@mixin lazyloaded {
+  opacity: 1;
+  visibility: visible;
+  transition: $transition-hover;
+  -webkit-backface-visibility: visible;
+}

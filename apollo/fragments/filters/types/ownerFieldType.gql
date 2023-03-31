@@ -1,0 +1,5 @@
+fragment OwnerFieldType on OwnerField {
+  title
+  id
+  slug
+}

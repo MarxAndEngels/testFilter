@@ -1,0 +1,5 @@
+fragment OwnerType on Owner {
+  id
+  title
+  number
+}

@@ -1,0 +1,5 @@
+fragment MarkType on Mark {
+  id
+  slug
+  title
+}
