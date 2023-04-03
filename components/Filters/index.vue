@@ -174,7 +174,6 @@ export default {
 					}
 					this.year = arr
 				}
-				console.log(response.data.offerFilters.price[0])
 				//записывает цену с сервера
 				this.selectPrice(response.data.offerFilters.price[0]);
 
@@ -295,7 +294,6 @@ export default {
 			if(this.$route.name == 'index'){
 				this.setChosen(null);
 			 }
-			 console.log(this.chosenStore)
 			
 			 //если в сторе есть данные
 			  if(this.chosenStore?.mark){
@@ -306,7 +304,7 @@ export default {
 
 			  //если в сторе нет данных берет с параметров урл
 			  else if(this.$route.params.mark){
-				this.chosenMark = this.marks.filter(el=>{ return String(el.slug) == this.$route.params.mark })[0]
+				this.chosenMark = this.marks.find(el=>{ return String(el.slug) == this.$route.params.mark })
 				this.folders = this.chosenMark.folders
 			  }
 			  //если в сторе нет данных берет с параметров урл
@@ -319,7 +317,7 @@ export default {
 			           })
 			  }
 			  else if(this.$route.params.folder){
-				this.chosenFolder = this.folders.filter(el=>{ return String(el.slug) == this.$route.params.folder })[0]
+				this.chosenFolder = this.folders.find(el=>{ return String(el.slug) == this.$route.params.folder })
 				this.generations = this.chosenFolder.generations.map(item => {
 				        let generation = item.name + ` [${item.year_begin} - ${item.year_end || ' н.в.'}]`
 				        return { ...item, name: generation }
@@ -330,7 +328,7 @@ export default {
 				this.chosenGeneration = this.chosenStore.generation
 			  }
 			  else if(this.$route.params.generation){
-				this.chosenGeneration = this.generations.filter(el=>{ return String(el.slug) == this.$route.params.generation })[0]
+				this.chosenGeneration = this.generations.find(el=>{ return String(el.slug) == this.$route.params.generation })
 			  }
 
 			  if(this.chosenStore?.price){
